@@ -93,7 +93,7 @@
                                 <rect key="frame" x="16" y="149" width="398" height="156.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBe-pc-Koe">
-                                        <rect key="frame" x="90.333333333333329" y="0.0" width="217.66666666666669" height="36"/>
+                                        <rect key="frame" x="90.333333333333314" y="0.0" width="217.66666666666669" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
