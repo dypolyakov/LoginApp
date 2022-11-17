@@ -44,6 +44,11 @@ class LoginViewController: UIViewController {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
 
 // MARK: - UIAlertController
@@ -58,10 +63,12 @@ extension LoginViewController {
             message: message,
             preferredStyle: .alert
         )
+        
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             guard let password = textFieldToClear?.text, !password.isEmpty else { return }
             textFieldToClear?.text = ""
         }
+        
         alert.addAction(okAction)
         present(alert, animated: true)
     }
