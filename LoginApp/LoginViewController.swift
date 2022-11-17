@@ -14,11 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeViewController = segue.destination as? WelcomeViewController {
             welcomeViewController.userNameTextField = userNameTextField.text
@@ -30,7 +25,8 @@ class LoginViewController: UIViewController {
             passwordTextField.text != accountPassword {
             showAlert(
                 with: "Invalid login or password",
-                and: "Please, enter correct login and password"
+                and: "Please, enter correct login and password",
+                textFieldToClear: passwordTextField
             )
         }
     }
@@ -52,16 +48,19 @@ class LoginViewController: UIViewController {
 
 // MARK: - UIAlertController
 extension LoginViewController {
-    private func showAlert(with title: String, and message: String) {
+    private func showAlert(
+        with title: String,
+        and message: String,
+        textFieldToClear: UITextField? = nil
+    ) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: "OK", style: .default) { loginAction in
-            guard let password = self.passwordTextField.text, !password.isEmpty else { return }
-            print("############ Clear password ############")
-            self.passwordTextField.text = ""
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            guard let password = textFieldToClear?.text, !password.isEmpty else { return }
+            textFieldToClear?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
