@@ -111,6 +111,10 @@
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" systemColor="linkColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutAction" destination="lbM-kZ-ECL" eventType="touchUpInside" id="heH-zM-WBQ"/>
+                                    <segue destination="A66-ui-FZU" kind="unwind" unwindAction="unwindFor:" id="00j-i3-lNP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IN8-ax-RBp"/>
@@ -125,8 +129,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tiv-89-dRd"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="oBe-pc-Koe" id="wB7-zY-ZSm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLG-A4-Y6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="A66-ui-FZU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="910.68702290076328" y="-35.211267605633807"/>
         </scene>
