@@ -50,7 +50,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-        guard let _ = unwindSegue.source as? WelcomeViewController else { return }
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
