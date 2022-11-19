@@ -114,8 +114,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutAction" destination="lbM-kZ-ECL" eventType="touchUpInside" id="heH-zM-WBQ"/>
-                                    <segue destination="A66-ui-FZU" kind="unwind" unwindAction="unwindFor:" id="00j-i3-lNP"/>
+                                    <segue destination="A66-ui-FZU" kind="unwind" unwindAction="unwindFor:" id="cNO-c2-WR3"/>
                                 </connections>
                             </button>
                         </subviews>

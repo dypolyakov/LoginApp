@@ -21,16 +21,14 @@ class WelcomeViewController: UIViewController {
         welcomeLabel.text = "Welcome, \(userNameTextField ?? "User")!"
     }
     
-    // MARK: - IB Actions
-    @IBAction func logoutAction() {
-        dismiss(animated: true)
-    }
-    
     // MARK: - Private Methods
     private func setBackgroundGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
-        gradient.colors = [UIColor.red.withAlphaComponent(0.4).cgColor, UIColor.blue.withAlphaComponent(0.4).cgColor]
+        gradient.colors = [
+            UIColor.red.withAlphaComponent(0.4).cgColor,
+            UIColor.blue.withAlphaComponent(0.4).cgColor
+        ]
         view.layer.insertSublayer(gradient, at: 0)
     }
 }
