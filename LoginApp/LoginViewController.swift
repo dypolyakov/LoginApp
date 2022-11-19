@@ -8,18 +8,28 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    // MARK: - IB Outlets
+    @IBOutlet var userNameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
+    // MARK: - Private properties
     private let accountUserName = "Dima"
     private let accountPassword = "1234"
     
-    @IBOutlet var userNameTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeViewController = segue.destination as? WelcomeViewController {
             welcomeViewController.userNameTextField = userNameTextField.text
         }
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: - IB Actions
     @IBAction func loginAction() {
         if userNameTextField.text != accountUserName ||
             passwordTextField.text != accountPassword {
@@ -44,11 +54,6 @@ class LoginViewController: UIViewController {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
 }
 
 // MARK: - UIAlertController
