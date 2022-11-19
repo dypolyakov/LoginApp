@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
@@ -16,8 +16,6 @@ class LoginViewController: UIViewController {
     // MARK: - Private properties
     private let accountUserName = "Dima"
     private let accountPassword = "1234"
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeViewController = segue.destination as? WelcomeViewController {
