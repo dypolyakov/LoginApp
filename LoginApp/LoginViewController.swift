@@ -10,7 +10,7 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     // MARK: - IB Outlets
-    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private properties
@@ -19,7 +19,7 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeVC = segue.destination as? WelcomeViewController {
-            welcomeVC.user = usernameTextField.text
+            welcomeVC.user = user
         }
     }
     
@@ -30,7 +30,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func loginAction() {
-        guard usernameTextField.text == user, passwordTextField.text == password else {
+        guard userNameTextField.text == user, passwordTextField.text == password else {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password",
@@ -50,7 +50,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-        usernameTextField.text = ""
+        userNameTextField.text = ""
         passwordTextField.text = ""
     }
 }

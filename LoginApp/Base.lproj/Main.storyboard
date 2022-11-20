@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="yrD-gH-ruI">
-                                <rect key="frame" x="16" y="180" width="288" height="208"/>
+                                <rect key="frame" x="16" y="144" width="288" height="208"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81T-R5-pNt">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
@@ -67,13 +67,13 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yrD-gH-ruI" secondAttribute="trailing" constant="16" id="AA1-s1-TgW"/>
                             <constraint firstItem="yrD-gH-ruI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bLw-ZO-Tvk"/>
-                            <constraint firstItem="yrD-gH-ruI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pvM-Vd-JMm"/>
+                            <constraint firstItem="yrD-gH-ruI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-36" id="pvM-Vd-JMm"/>
                             <constraint firstItem="yrD-gH-ruI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qCI-tB-qHF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="b9d-TP-FdW" id="2aD-bR-fgO"/>
-                        <outlet property="usernameTextField" destination="81T-R5-pNt" id="JUi-am-3Cu"/>
+                        <outlet property="userNameTextField" destination="81T-R5-pNt" id="JUi-am-3Cu"/>
                         <segue destination="lbM-kZ-ECL" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="NmV-GZ-luD"/>
                     </connections>
                 </viewController>
