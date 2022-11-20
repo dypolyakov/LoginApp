@@ -13,12 +13,12 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     
     // MARK: - public properties
-    var userName: String!
+    var user: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundGradient()
-        welcomeLabel.text = "Welcome, \(userName ?? "User")!"
+        welcomeLabel.text = "Welcome, \(user ?? "User")!"
     }
     
     // MARK: - Private Methods

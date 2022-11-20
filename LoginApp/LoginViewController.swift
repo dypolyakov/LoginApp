@@ -10,16 +10,16 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     // MARK: - IB Outlets
-    @IBOutlet var userNameTextField: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private properties
-    private let accountUserName = "Dima"
-    private let accountPassword = "1234"
+    private let user = "Dima"
+    private let password = "1234"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let welcomeViewController = segue.destination as? WelcomeViewController {
-            welcomeViewController.userName = userNameTextField.text
+        if let welcomeVC = segue.destination as? WelcomeViewController {
+            welcomeVC.user = usernameTextField.text
         }
     }
     
@@ -30,26 +30,27 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func loginAction() {
-        if userNameTextField.text != accountUserName ||
-            passwordTextField.text != accountPassword {
+        guard usernameTextField.text == user, passwordTextField.text == password else {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password",
                 textFieldToClear: passwordTextField
             )
+            return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotUserNameAction() {
-        showAlert(with: "Oops!", and: "Your name is \(accountUserName) 😉")
+        showAlert(with: "Oops!", and: "Your name is \(user) 😉")
     }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password is \(accountPassword) 😉")
+        showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-        userNameTextField.text = ""
+        usernameTextField.text = ""
         passwordTextField.text = ""
     }
 }
