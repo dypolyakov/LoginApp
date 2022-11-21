@@ -74,14 +74,14 @@
                     <connections>
                         <outlet property="passwordTextField" destination="b9d-TP-FdW" id="2aD-bR-fgO"/>
                         <outlet property="userNameTextField" destination="81T-R5-pNt" id="JUi-am-3Cu"/>
-                        <segue destination="lbM-kZ-ECL" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="NmV-GZ-luD"/>
+                        <segue destination="E6C-ch-vrh" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="dyU-Sf-09J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="-34"/>
+            <point key="canvasLocation" x="221" y="-96"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="09p-qv-fBU">
             <objects>
                 <viewController id="lbM-kZ-ECL" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,7 +107,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eds-2l-vMB">
-                                <rect key="frame" x="16" y="443" width="288" height="45"/>
+                                <rect key="frame" x="16" y="394" width="288" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out">
@@ -129,6 +129,7 @@
                             <constraint firstItem="3LO-vL-LGR" firstAttribute="top" secondItem="IN8-ax-RBp" secondAttribute="top" constant="90" id="vNi-Eh-V0x"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="hand.wave" catalog="system" selectedImage="hand.wave.fill" id="MiE-oX-vpH"/>
                     <navigationItem key="navigationItem" id="tiv-89-dRd"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="oBe-pc-Koe" id="wB7-zY-ZSm"/>
@@ -137,10 +138,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLG-A4-Y6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="A66-ui-FZU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="910.68702290076328" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="1086" y="701"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="ejO-Pl-fbQ">
+            <objects>
+                <viewController id="HLc-Ij-suB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zvb-QQ-Uv2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oD5-FY-osb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="questionmark.circle" catalog="system" selectedImage="questionmark.circle.fill" id="Ree-Ox-9T2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88p-5l-uWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="702"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="41I-wj-ufD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E6C-ch-vrh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WMJ-9u-d3g">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lbM-kZ-ECL" kind="relationship" relationship="viewControllers" id="FGF-54-wB9"/>
+                        <segue destination="HLc-Ij-suB" kind="relationship" relationship="viewControllers" id="G0b-5y-rno"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgF-4Q-BNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="-96"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hand.wave" catalog="system" width="128" height="128"/>
+        <image name="hand.wave.fill" catalog="system" width="128" height="128"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
