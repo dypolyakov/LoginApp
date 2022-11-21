@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: - Private properties
     private let user = "Dima"
-    private let password = "1234"
+    private let password = "123"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeVC = segue.destination as? WelcomeViewController {

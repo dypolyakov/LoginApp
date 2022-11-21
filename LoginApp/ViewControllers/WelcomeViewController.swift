@@ -18,7 +18,8 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundGradient()
-        welcomeLabel.text = "Welcome, \(user)!"
+        let user = User.getUser()
+        welcomeLabel.text = "Welcome, \(user.person.name)!"
     }
     
     // MARK: - Private Methods
