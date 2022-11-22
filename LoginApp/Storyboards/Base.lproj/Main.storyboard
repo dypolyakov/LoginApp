@@ -148,8 +148,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling.inverse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-MK-CrM">
-                                <rect key="frame" x="16" y="20.5" width="288" height="283"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dmitry" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-MK-CrM">
+                                <rect key="frame" x="16" y="20" width="288" height="284"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qxL-Pf-eIU">
                                 <rect key="frame" x="16" y="324" width="288" height="106"/>
@@ -216,7 +216,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oD5-FY-osb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="oD5-FY-osb" firstAttribute="trailing" secondItem="iZf-MK-CrM" secondAttribute="trailing" constant="16" id="8Va-DL-tAR"/>
                             <constraint firstItem="oD5-FY-osb" firstAttribute="trailing" secondItem="qxL-Pf-eIU" secondAttribute="trailing" constant="16" id="JU7-Jw-IkI"/>
@@ -260,14 +260,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="face.smiling.inverse" catalog="system" width="128" height="123"/>
+        <image name="dmitry" width="1440" height="1440"/>
         <image name="hand.wave" catalog="system" width="128" height="128"/>
         <image name="hand.wave.fill" catalog="system" width="128" height="128"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

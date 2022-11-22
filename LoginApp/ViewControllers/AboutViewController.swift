@@ -25,11 +25,7 @@ final class AboutViewController: UIViewController {
     
     private func showInfo() {
         sexLabel.text = user?.person.sex
-        if let age = user?.person.age {
-            ageLabel.text = String(age)
-        } else {
-            ageLabel.text = ""
-        }
+        ageLabel.text = String(user?.person.age ?? 0)
         educationLabel.text = user?.person.education
         hobbyLabel.text = user?.person.hobby
     }
