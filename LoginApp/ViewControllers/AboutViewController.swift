@@ -23,6 +23,7 @@ final class AboutViewController: UIViewController {
         showInfo()
     }
     
+    // MARK: - Private Methods
     private func showInfo() {
         sexLabel.text = user?.person.sex
         ageLabel.text = String(user?.person.age ?? 0)
