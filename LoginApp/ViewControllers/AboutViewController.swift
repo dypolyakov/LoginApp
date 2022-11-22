@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+final class AboutViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var sexLabel: UILabel!
@@ -16,18 +16,21 @@ class AboutViewController: UIViewController {
     @IBOutlet var hobbyLabel: UILabel!
     
     // MARK: - Public Properties
-    var sex = ""
-    var age = 0
-    var education = ""
-    var hobby = ""
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sexLabel.text = sex
-        ageLabel.text = String(age)
-        educationLabel.text = education
-        hobbyLabel.text = hobby
-        
+        showInfo()
     }
-
+    
+    private func showInfo() {
+        sexLabel.text = user?.person.sex
+        if let age = user?.person.age {
+            ageLabel.text = String(age)
+        } else {
+            ageLabel.text = ""
+        }
+        educationLabel.text = user?.person.education
+        hobbyLabel.text = user?.person.hobby
+    }
 }

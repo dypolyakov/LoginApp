@@ -25,11 +25,7 @@ final class LoginViewController: UIViewController {
                 welcomeVC.firstName = user.person.firstName
                 welcomeVC.lastName = user.person.lastName
             } else if let aboutVC = viewController as? AboutViewController {
-                aboutVC.sex = user.person.sex
-                aboutVC.age = user.person.age
-                aboutVC.education = user.person.education
-                aboutVC.hobby = user.person.hobby
-                
+                aboutVC.user = user
             }
         }
     }
