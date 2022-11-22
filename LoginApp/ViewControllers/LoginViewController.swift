@@ -14,12 +14,23 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private properties
-    private let user = "Dima"
-    private let password = "123"
+    private let user = User.getUser()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let welcomeVC = segue.destination as? WelcomeViewController {
-            welcomeVC.user = user
+        guard let tabBarVC = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.firstName = user.person.firstName
+                welcomeVC.lastName = user.person.lastName
+            } else if let aboutVC = viewController as? AboutViewController {
+                aboutVC.sex = user.person.sex
+                aboutVC.age = user.person.age
+                aboutVC.education = user.person.education
+                aboutVC.hobby = user.person.hobby
+                
+            }
         }
     }
     
@@ -30,7 +41,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func loginAction() {
-        guard userNameTextField.text == user, passwordTextField.text == password else {
+        guard userNameTextField.text == user.login, passwordTextField.text == user.password else {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password",
@@ -38,15 +49,15 @@ final class LoginViewController: UIViewController {
             )
             return
         }
-        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        performSegue(withIdentifier: "tabBarController", sender: nil)
     }
     
     @IBAction func forgotUserNameAction() {
-        showAlert(with: "Oops!", and: "Your name is \(user) 😉")
+        showAlert(with: "Oops!", and: "Your name is \(user.login) 😉")
     }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password is \(password) 😉")
+        showAlert(with: "Oops!", and: "Your password is \(user.password) 😉")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
@@ -69,7 +80,6 @@ extension LoginViewController {
         )
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            guard let password = textFieldToClear?.text, !password.isEmpty else { return }
             textFieldToClear?.text = ""
         }
         

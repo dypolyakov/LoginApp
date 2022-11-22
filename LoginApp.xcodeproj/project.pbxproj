@@ -15,6 +15,7 @@
 		475413EC2924DBBC008FE582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475413EA2924DBBC008FE582 /* LaunchScreen.storyboard */; };
 		475413F42924E5D7008FE582 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475413F32924E5D7008FE582 /* WelcomeViewController.swift */; };
 		4759B0D3292BB37400A38233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759B0D2292BB37400A38233 /* User.swift */; };
+		4759B0D7292D3CF600A38233 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4759B0D6292D3CF600A38233 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		475413ED2924DBBC008FE582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		475413F32924E5D7008FE582 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4759B0D2292BB37400A38233 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4759B0D6292D3CF600A38233 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				475413E32924DBBA008FE582 /* LoginViewController.swift */,
 				475413F32924E5D7008FE582 /* WelcomeViewController.swift */,
+				4759B0D6292D3CF600A38233 /* AboutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4759B0D7292D3CF600A38233 /* AboutViewController.swift in Sources */,
 				4759B0D3292BB37400A38233 /* User.swift in Sources */,
 				475413E42924DBBA008FE582 /* LoginViewController.swift in Sources */,
 				475413F42924E5D7008FE582 /* WelcomeViewController.swift in Sources */,

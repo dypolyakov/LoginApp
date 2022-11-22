@@ -15,16 +15,20 @@ struct User {
             login: "Dima",
             password: "123",
             person: Person(
-                name: "Dmitry Polyakov",
+                firstName: "Dmitry",
+                lastName: "Polyakov",
                 sex: "Male",
                 age: 32,
                 education: "Higher",
-                hobby: "Swift"))
+                hobby: "Swift"
+            )
+        )
     }
 }
 
 struct Person {
-    let name: String
+    let firstName: String
+    let lastName: String
     let sex: String
     let age: Int
     let education: String
