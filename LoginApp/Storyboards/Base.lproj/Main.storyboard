@@ -148,8 +148,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dmitry" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-MK-CrM">
-                                <rect key="frame" x="16" y="20" width="288" height="284"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling.inverse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-MK-CrM">
+                                <rect key="frame" x="16" y="20.5" width="288" height="283"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qxL-Pf-eIU">
                                 <rect key="frame" x="16" y="324" width="288" height="106"/>
@@ -232,6 +232,7 @@
                         <outlet property="ageLabel" destination="QLJ-Ds-tvb" id="NGH-uD-1lH"/>
                         <outlet property="educationLabel" destination="N8c-uG-G9A" id="a1d-BA-FyH"/>
                         <outlet property="hobbyLabel" destination="9bP-6W-x2R" id="Vdv-Rw-N81"/>
+                        <outlet property="photoImageView" destination="iZf-MK-CrM" id="6mK-N6-UMv"/>
                         <outlet property="sexLabel" destination="uEa-9e-DnS" id="PgZ-tS-zFk"/>
                     </connections>
                 </viewController>
@@ -260,7 +261,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dmitry" width="1440" height="1440"/>
+        <image name="face.smiling.inverse" catalog="system" width="128" height="123"/>
         <image name="hand.wave" catalog="system" width="128" height="128"/>
         <image name="hand.wave.fill" catalog="system" width="128" height="128"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>

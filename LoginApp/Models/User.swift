@@ -22,6 +22,7 @@ struct User {
 struct Person {
     let firstName: String
     let lastName: String
+    let photo: String
     let sex: String
     let age: Int
     let education: String
@@ -31,6 +32,7 @@ struct Person {
         Person(
             firstName: "Dmitry",
             lastName: "Polyakov",
+            photo: "dmitry",
             sex: "Male",
             age: 32,
             education: "Higher",

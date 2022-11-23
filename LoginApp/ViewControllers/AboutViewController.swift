@@ -10,13 +10,14 @@ import UIKit
 final class AboutViewController: UIViewController {
     
     // MARK: - IB Outlets
+    @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var sexLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var educationLabel: UILabel!
     @IBOutlet var hobbyLabel: UILabel!
     
     // MARK: - Public Properties
-    var user: User?
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,10 @@ final class AboutViewController: UIViewController {
     
     // MARK: - Private Methods
     private func showInfo() {
-        sexLabel.text = user?.person.sex
-        ageLabel.text = String(user?.person.age ?? 0)
-        educationLabel.text = user?.person.education
-        hobbyLabel.text = user?.person.hobby
+        photoImageView.image = UIImage(named: user.person.photo)
+        sexLabel.text = user.person.sex
+        ageLabel.text = String(user.person.age)
+        educationLabel.text = user.person.education
+        hobbyLabel.text = user.person.hobby
     }
 }
