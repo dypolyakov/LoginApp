@@ -14,14 +14,7 @@ struct User {
         User(
             login: "Dima",
             password: "123",
-            person: Person(
-                firstName: "Dmitry",
-                lastName: "Polyakov",
-                sex: "Male",
-                age: 32,
-                education: "Higher",
-                hobby: "Swift"
-            )
+            person: Person.getPerson()
         )
     }
 }
@@ -33,4 +26,15 @@ struct Person {
     let age: Int
     let education: String
     let hobby: String
+    
+    static func getPerson() -> Person {
+        Person(
+            firstName: "Dmitry",
+            lastName: "Polyakov",
+            sex: "Male",
+            age: 32,
+            education: "Higher",
+            hobby: "Swift"
+        )
+    }
 }
